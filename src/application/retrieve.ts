@@ -46,7 +46,7 @@ export const retrieveHotels = async (
         return { hotel: hotel, confidence: el[1] };
       })
     );
-
+    await sleep(5000);
     res.status(200).json(matchedHotels);
   } catch (error) {
     next(error);

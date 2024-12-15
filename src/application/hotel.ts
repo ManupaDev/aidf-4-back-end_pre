@@ -32,6 +32,7 @@ export const getHotels = async (
 ) => {
   try {
     const hotels = await Hotel.find();
+    await sleep(1000);
     res.status(200).json(hotels);
   } catch (error) {
     next(error);
