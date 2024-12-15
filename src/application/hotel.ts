@@ -2,6 +2,7 @@ import Hotel from "./../infrastructure/schemas/hotel";
 import NotFoundError from "./../domain/errors/not-found-error"; // Update with your custom error imports
 import { createHotelDTO, updateHotelDTO } from "./../domain/dto/hotel"; // Import Zod schemas
 import { NextFunction, Request, Response } from "express"; // Import Express types
+import { sleep } from "../utils";
 
 // Create a new hotel
 export const createHotel = async (

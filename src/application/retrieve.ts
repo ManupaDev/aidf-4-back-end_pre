@@ -3,6 +3,7 @@ import { OpenAIEmbeddings } from "@langchain/openai";
 import { NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
 import Hotel from "../infrastructure/schemas/hotel";
+import { sleep } from "./../utils";
 
 export const retrieveHotels = async (
   req: Request,
