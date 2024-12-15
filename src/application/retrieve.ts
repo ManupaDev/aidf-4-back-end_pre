@@ -47,7 +47,11 @@ export const retrieveHotels = async (
       })
     );
     await sleep(5000);
-    res.status(200).json(matchedHotels);
+    res
+      .status(200)
+      .json(
+        matchedHotels.length > 3 ? matchedHotels.slice(0, 3) : matchedHotels
+      );
   } catch (error) {
     next(error);
   }
